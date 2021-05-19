@@ -11,6 +11,7 @@
     <a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
     <hr>
 
+    <!-- view for inbox -->
     <div id="emails-view">
         <h3 id='inbox-name'></h3>
         <table id="emails-table">
@@ -19,6 +20,7 @@
         </table>
     </div>
 
+    <!-- view for composing email -->
     <div id="compose-view">
         <h3>New Email</h3>
         <form id="compose-form">
@@ -34,6 +36,16 @@
             <textarea class="form-control" id="compose-body" placeholder="Body"></textarea>
             <input type="submit" class="btn btn-primary" id='submit-btn'/>
         </form>
+    </div>
+
+    <!-- view for reading email messages -->
+    <div id="message-view">
+        <h3 id='message-subject'></h3>
+        <button id='reply-message' class="btn btn-secondary">Reply</button>
+        <button id='archive-message' class="btn btn-secondary">Archive</button>
+        <p id='message-sender'></p>
+        <p id='message-recipients'></p>
+        <p id='message-body'></p>
     </div>
 {% endblock %}
 
